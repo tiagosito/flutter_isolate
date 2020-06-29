@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_isolate/isolate_one.dart';
+import 'package:flutter_isolate/isolate_three.dart';
 import 'package:flutter_isolate/isolate_two.dart';
 
 void main() {
@@ -81,6 +82,30 @@ class _HomeState extends State<Home> {
                     ),
                   ),
                   Text('Isolate 2'),
+                ],
+              ),
+            ),
+          ),
+          SizedBox(
+            width: 50,
+          ),
+          GestureDetector(
+            onTap: () {
+              IsolateThree().runIsolateFn();
+            },
+            child: Center(
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                crossAxisAlignment: CrossAxisAlignment.center,
+                children: [
+                  Container(
+                    child: Icon(
+                      Icons.apps,
+                      size: 50,
+                      color: Colors.purple,
+                    ),
+                  ),
+                  Text('Isolate 3'),
                 ],
               ),
             ),

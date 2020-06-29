@@ -18,10 +18,12 @@ class IsolateOne {
       (data) {
         if (data == null) {
           print('Oh nooo! Data not received!');
-          stop();
+          //stop();
         } else {
           print(data);
         }
+
+        stop();
       },
     );
   }
